@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Baixe o arquivo Pergunta Secreta.bgr" />
+  <title>Download · Pergunta Secreta</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+    :root {
+      color-scheme: dark;
+      --bg: #09111f;
+      --text: #f6f7fb;
+      --muted: #aeb8ca;
+      --line: rgba(255,255,255,.18);
+      --accent: #8b7cff;
+      --accent-2: #4edbd1;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      font-family: "Ubuntu", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-weight: 300;
+      color: var(--text);
+      background: #525252;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #3d72b4, #525252);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #3d72b4, #525252); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      filter: blur(1px);
+      opacity: .5;
+      pointer-events: none;
+    }
+
+    body::before {
+      top: -110px;
+      right: 9%;
+      background: linear-gradient(135deg, rgba(154,142,255,.8), rgba(95,72,212,.05));
+    }
+
+    body::after {
+      bottom: -150px;
+      left: 7%;
+      background: linear-gradient(135deg, rgba(70,223,210,.55), rgba(33,129,145,.04));
+    }
+
+    .shell {
+      position: relative;
+      width: min(92vw, 500px);
+      padding: 1px;
+      border-radius: 30px;
+      background: linear-gradient(135deg, rgba(255,255,255,.48), rgba(255,255,255,.06) 42%, rgba(119,223,215,.24));
+      box-shadow: 0 30px 90px rgba(0,0,0,.42), 0 0 0 1px rgba(255,255,255,.05);
+    }
+
+    .card {
+      position: relative;
+      padding: clamp(2rem, 7vw, 3.5rem);
+      overflow: hidden;
+      border-radius: 29px;
+      background: linear-gradient(145deg, rgba(255,255,255,.17), rgba(255,255,255,.065));
+      backdrop-filter: blur(24px) saturate(135%);
+      -webkit-backdrop-filter: blur(24px) saturate(135%);
+    }
+
+    .card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(115deg, rgba(255,255,255,.12), transparent 28%, transparent 72%, rgba(255,255,255,.05));
+    }
+
+    .content { position: relative; z-index: 1; }
+
+    .icon {
+      width: 68px;
+      height: 68px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 1.7rem;
+      border: 1px solid rgba(255,255,255,.26);
+      border-radius: 21px;
+      background: linear-gradient(145deg, rgba(255,255,255,.28), rgba(255,255,255,.07));
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 12px 35px rgba(83,75,190,.22);
+      font-size: 1.85rem;
+    }
+
+    .eyebrow {
+      margin: 0 0 .7rem;
+      color: var(--accent-2);
+      font-size: .74rem;
+      font-weight: 800;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 360px;
+      margin: 0;
+      font-size: clamp(2rem, 7vw, 3.25rem);
+      line-height: .98;
+      letter-spacing: -.055em;
+    }
+
+    .description {
+      margin: 1.35rem 0 2rem;
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.65;
+    }
+
+    .actions { display: grid; gap: .75rem; }
+
+    .file {
+      display: flex;
+      align-items: center;
+      gap: .85rem;
+      margin-bottom: 1.35rem;
+      padding: .9rem 1rem;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(0,0,0,.12);
+      color: #e7eaf2;
+      font-size: .9rem;
+      overflow: hidden;
+    }
+
+    .file span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .file strong { display: block; margin-bottom: .16rem; font-size: .92rem; }
+    .file small { color: #9ca9bd; }
+
+    .file-icon { font-size: 1.35rem; }
+
+    button {
+      width: 100%;
+      border: 0;
+      border-radius: 16px;
+      padding: 1rem 1.2rem;
+      color: #101426;
+      background: linear-gradient(110deg, #b8b0ff, #7dceff 52%, #76eee0);
+      box-shadow: 0 12px 30px rgba(103,135,255,.28), inset 0 1px 0 rgba(255,255,255,.6);
+      cursor: pointer;
+      font: inherit;
+      font-weight: 800;
+      transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+    }
+
+    button:hover { transform: translateY(-2px); filter: brightness(1.07); box-shadow: 0 17px 36px rgba(103,135,255,.38), inset 0 1px 0 rgba(255,255,255,.6); }
+    button:active { transform: translateY(0); }
+    button:focus-visible { outline: 3px solid rgba(255,255,255,.8); outline-offset: 4px; }
+    button:disabled { cursor: wait; opacity: .75; }
+
+    .secondary-button {
+      color: #eef4ff;
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.22);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.12), 0 8px 22px rgba(0,0,0,.12);
+    }
+
+    .secondary-button:hover { box-shadow: inset 0 1px 0 rgba(255,255,255,.18), 0 12px 28px rgba(0,0,0,.2); }
+
+    .source {
+      display: block;
+      margin-top: 1.15rem;
+      color: #8f9cb0;
+      font-size: .76rem;
+      text-align: center;
+      text-decoration: none;
+    }
+    .source:hover { color: #d9def0; text-decoration: underline; }
+
+    #status { min-height: 1.25rem; margin: .8rem 0 0; color: #bcefeb; font-size: .82rem; text-align: center; }
+
+    .intro-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 20;
+      display: grid;
+      place-items: center;
+      padding: 1.25rem;
+      background: #525252;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #3d72b4, #525252);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #3d72b4, #525252); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .intro-modal[hidden] { display: none; }
+
+    .intro-panel {
+      width: min(92vw, 580px);
+      padding: clamp(1.75rem, 6vw, 3rem);
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: 28px;
+      background: linear-gradient(145deg, rgba(255,255,255,.2), rgba(255,255,255,.07));
+      box-shadow: 0 30px 90px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.2);
+      backdrop-filter: blur(25px) saturate(135%);
+      -webkit-backdrop-filter: blur(25px) saturate(135%);
+    }
+
+    .intro-panel h2 { margin: 0 0 .9rem; font-size: clamp(1.55rem, 5vw, 2.25rem); font-weight: 400; letter-spacing: -.035em; }
+    .intro-panel p { margin: 0; color: var(--muted); font-size: 1rem; line-height: 1.65; }
+    .intro-note { margin-top: .9rem !important; color: #d7def0 !important; font-size: .86rem !important; }
+
+    .progress-wrap { margin: 1.8rem 0 1.25rem; }
+    .progress-meta { display: flex; justify-content: space-between; margin-bottom: .55rem; color: #dfe7f5; font-size: .8rem; }
+    .progress-track { height: 10px; overflow: hidden; border: 1px solid rgba(255,255,255,.18); border-radius: 999px; background: rgba(0,0,0,.2); }
+    .progress-bar { width: 0%; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--accent), var(--accent-2)); box-shadow: 0 0 18px rgba(78,219,209,.55); transition: width 1s linear; }
+    .intro-close:disabled { color: #98a5b9; background: rgba(255,255,255,.12); box-shadow: none; }
+
+    .action-modal { z-index: 30; }
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      z-index: 10;
+      display: grid;
+      place-items: center;
+      padding: clamp(.75rem, 3vw, 2rem);
+      background: #525252;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #3d72b4, #525252);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #3d72b4, #525252); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .modal[hidden] { display: none; }
+
+    .modal-panel {
+      position: relative;
+      width: min(96vw, 1500px);
+      height: min(94vh, 1000px);
+      display: block;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.24);
+      border-radius: 24px;
+      background: linear-gradient(145deg, rgba(255,255,255,.18), rgba(255,255,255,.06));
+      box-shadow: 0 30px 100px rgba(0,0,0,.55), inset 0 1px 0 rgba(255,255,255,.14);
+    }
+
+    .modal-scroll {
+      width: 100%;
+      height: 100%;
+      padding: clamp(2.5rem, 5vw, 4rem) clamp(.75rem, 2vw, 2rem) clamp(.75rem, 2vw, 2rem);
+      overflow-x: hidden;
+      overflow-y: auto;
+      scrollbar-color: rgba(255,255,255,.45) rgba(0,0,0,.18);
+      scrollbar-width: thin;
+    }
+
+    .modal-title {
+      position: absolute;
+      top: 1rem;
+      left: 1.25rem;
+      margin: 0;
+      color: #f5f7ff;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: .75rem;
+      right: .75rem;
+      z-index: 1;
+      width: 2.5rem;
+      height: 2.5rem;
+      padding: 0;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,.25);
+      background: rgba(0,0,0,.24);
+      font-size: 1.5rem;
+      font-weight: 300;
+      line-height: 1;
+    }
+
+    .modal-image {
+      display: block;
+      width: 100%;
+      max-width: none;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 16px 45px rgba(0,0,0,.35);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div id="introModal" class="intro-modal" role="dialog" aria-modal="true" aria-labelledby="introTitle">
+    <section class="intro-panel">
+      <p class="eyebrow">Antes de começar</p>
+      <h2 id="introTitle">Recuperação da pergunta de segurança</h2>
+      <p>Este material serve para ajudar a descobrir a pergunta de segurança do usuário do sistema Domínio quando ela foi esquecida, evitando a necessidade de redefinir a senha para recuperar o acesso.</p>
+      <div class="progress-wrap">
+        <div class="progress-meta"><span id="progressLabel">Aguarde para continuar</span><strong id="progressTime">20s</strong></div>
+        <div class="progress-track" role="progressbar" aria-label="Tempo de orientação" aria-valuemin="0" aria-valuemax="20" aria-valuenow="0"><div id="progressBar" class="progress-bar"></div></div>
+      </div>
+    </section>
+  </div>
+
+  <div id="actionModal" class="intro-modal action-modal" role="status" aria-live="polite" aria-labelledby="actionTitle" hidden>
+    <section class="intro-panel">
+      <p class="eyebrow">Aguarde um momento</p>
+      <h2 id="actionTitle">Preparando…</h2>
+      <p>O conteúdo será aberto automaticamente quando a contagem terminar.</p>
+      <div class="progress-wrap">
+        <div class="progress-meta"><span id="actionProgressLabel">Carregando</span><strong id="actionProgressTime">7s</strong></div>
+        <div class="progress-track" role="progressbar" aria-label="Progresso da abertura" aria-valuemin="0" aria-valuemax="7" aria-valuenow="0"><div id="actionProgressBar" class="progress-bar"></div></div>
+      </div>
+    </section>
+  </div>
+
+  <main id="mainContent" class="shell" hidden>
+    <section class="card" aria-labelledby="title">
+      <div class="content">
+        <div class="icon" aria-hidden="true">↓</div>
+        <p class="eyebrow">Arquivo disponível</p>
+        <h1 id="title">Pergunta Secreta</h1>
+        <p class="description">Baixe o arquivo diretamente do GitHub com um clique.</p>
+
+        <div class="file" aria-label="Arquivo para download">
+          <div class="file-icon" aria-hidden="true">▣</div>
+          <span><strong>Pergunta Secreta.bgr</strong><small>Arquivo binário · GitHub</small></span>
+        </div>
+
+        <div class="actions">
+          <button id="downloadButton" type="button">Download do arquivo</button>
+          <button id="stepsButton" class="secondary-button" type="button">Passo a passo</button>
+        </div>
+        <p id="status" role="status" aria-live="polite"></p>
+        <a class="source" href="https://github.com/iramalho1980/gerador/blob/4671e15b454bc50823b24a2df6aa526855e68c57/Pergunta%20Secreta.bgr" target="_blank" rel="noopener">Ver arquivo no GitHub ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <div id="stepsModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="stepsTitle" hidden>
+    <div class="modal-panel">
+      <h2 id="stepsTitle" class="modal-title">Passo a passo</h2>
+      <button id="closeModal" class="modal-close" type="button" aria-label="Fechar passo a passo">×</button>
+      <div class="modal-scroll">
+        <img class="modal-image" src="https://raw.githubusercontent.com/iramalho1980/gerador/ff8af7bcec5e8caadb57d00bfa37eff08eae207b/passo%20a%20passo%20respostasecreta.png" alt="Imagem com o passo a passo da resposta secreta" />
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const fileUrl = 'https://raw.githubusercontent.com/iramalho1980/gerador/4671e15b454bc50823b24a2df6aa526855e68c57/Pergunta%20Secreta.bgr';
+    const introModal = document.getElementById('introModal');
+    const mainContent = document.getElementById('mainContent');
+    const progressBar = document.getElementById('progressBar');
+    const progressTime = document.getElementById('progressTime');
+    const progressLabel = document.getElementById('progressLabel');
+    const progressTrack = document.querySelector('.progress-track');
+    const button = document.getElementById('downloadButton');
+    const status = document.getElementById('status');
+    const stepsButton = document.getElementById('stepsButton');
+    const stepsModal = document.getElementById('stepsModal');
+    const closeModal = document.getElementById('closeModal');
+    const actionModal = document.getElementById('actionModal');
+    const actionTitle = document.getElementById('actionTitle');
+    const actionProgressBar = document.getElementById('actionProgressBar');
+    const actionProgressTime = document.getElementById('actionProgressTime');
+    const actionProgressLabel = document.getElementById('actionProgressLabel');
+    const actionProgressTrack = actionModal.querySelector('.progress-track');
+    let actionBusy = false;
+
+    let elapsed = 0;
+    const introTimer = setInterval(() => {
+      elapsed += 1;
+      const remaining = Math.max(20 - elapsed, 0);
+      progressBar.style.width = `${(elapsed / 20) * 100}%`;
+      progressTime.textContent = `${remaining}s`;
+      progressTrack.setAttribute('aria-valuenow', elapsed);
+
+      if (remaining === 0) {
+        clearInterval(introTimer);
+        progressLabel.textContent = 'Orientação concluída';
+        introModal.hidden = true;
+        mainContent.hidden = false;
+        document.body.style.overflow = '';
+        button.focus();
+      }
+    }, 1000);
+
+    function openSteps() {
+      stepsModal.hidden = false;
+      document.body.style.overflow = 'hidden';
+      closeModal.focus();
+    }
+
+    function closeSteps() {
+      stepsModal.hidden = true;
+      document.body.style.overflow = '';
+      stepsButton.focus();
+    }
+
+    function runWithProgress(title, callback) {
+      if (actionBusy) return;
+      actionBusy = true;
+      button.disabled = true;
+      stepsButton.disabled = true;
+      actionTitle.textContent = title;
+      actionProgressLabel.textContent = 'Carregando';
+      actionProgressBar.style.width = '0%';
+      actionProgressTime.textContent = '7s';
+      actionProgressTrack.setAttribute('aria-valuenow', '0');
+      actionModal.hidden = false;
+
+      let elapsed = 0;
+      const timer = setInterval(() => {
+        elapsed += 1;
+        const remaining = Math.max(7 - elapsed, 0);
+        actionProgressBar.style.width = `${(elapsed / 7) * 100}%`;
+        actionProgressTime.textContent = `${remaining}s`;
+        actionProgressTrack.setAttribute('aria-valuenow', elapsed);
+
+        if (remaining === 0) {
+          clearInterval(timer);
+          actionProgressLabel.textContent = 'Concluído';
+          actionModal.hidden = true;
+          actionBusy = false;
+          button.disabled = false;
+          stepsButton.disabled = false;
+          callback();
+        }
+      }, 1000);
+    }
+
+    stepsButton.addEventListener('click', () => runWithProgress('Abrindo o passo a passo…', openSteps));
+    closeModal.addEventListener('click', closeSteps);
+    stepsModal.addEventListener('click', (event) => {
+      if (event.target === stepsModal) closeSteps();
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && !stepsModal.hidden) closeSteps();
+    });
+
+    async function downloadFile() {
+      status.textContent = 'Preparando download…';
+
+      try {
+        const response = await fetch(fileUrl, { mode: 'cors' });
+        if (!response.ok) throw new Error('Falha ao acessar o arquivo');
+        const blob = await response.blob();
+        const objectUrl = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = objectUrl;
+        link.download = 'Pergunta Secreta.bgr';
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        URL.revokeObjectURL(objectUrl);
+        status.textContent = 'Download iniciado.';
+      } catch (error) {
+        // Fallback para o download nativo do GitHub caso o fetch seja bloqueado.
+        const link = document.createElement('a');
+        link.href = fileUrl;
+        link.download = 'Pergunta Secreta.bgr';
+        link.target = '_blank';
+        link.rel = 'noopener';
+        link.click();
+        status.textContent = 'Abrindo o arquivo para download…';
+      } finally {
+        status.textContent = status.textContent || 'Download concluído.';
+      }
+    }
+
+    button.addEventListener('click', () => runWithProgress('Preparando o download…', downloadFile));
+  </script>
+</body>
+</html>
