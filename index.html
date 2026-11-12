@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Baixe o arquivo Pergunta Secreta.bgr" />
+  <title>Download · Pergunta Secreta</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #09111f;
+      --text: #f6f7fb;
+      --muted: #aeb8ca;
+      --line: rgba(255,255,255,.18);
+      --accent: #8b7cff;
+      --accent-2: #4edbd1;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 15% 15%, rgba(139,124,255,.34), transparent 31%),
+        radial-gradient(circle at 85% 80%, rgba(78,219,209,.24), transparent 34%),
+        linear-gradient(135deg, #0c1530 0%, var(--bg) 48%, #101827 100%);
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      filter: blur(1px);
+      opacity: .5;
+      pointer-events: none;
+    }
+
+    body::before {
+      top: -110px;
+      right: 9%;
+      background: linear-gradient(135deg, rgba(154,142,255,.8), rgba(95,72,212,.05));
+    }
+
+    body::after {
+      bottom: -150px;
+      left: 7%;
+      background: linear-gradient(135deg, rgba(70,223,210,.55), rgba(33,129,145,.04));
+    }
+
+    .shell {
+      position: relative;
+      width: min(92vw, 500px);
+      padding: 1px;
+      border-radius: 30px;
+      background: linear-gradient(135deg, rgba(255,255,255,.48), rgba(255,255,255,.06) 42%, rgba(119,223,215,.24));
+      box-shadow: 0 30px 90px rgba(0,0,0,.42), 0 0 0 1px rgba(255,255,255,.05);
+    }
+
+    .card {
+      position: relative;
+      padding: clamp(2rem, 7vw, 3.5rem);
+      overflow: hidden;
+      border-radius: 29px;
+      background: linear-gradient(145deg, rgba(255,255,255,.17), rgba(255,255,255,.065));
+      backdrop-filter: blur(24px) saturate(135%);
+      -webkit-backdrop-filter: blur(24px) saturate(135%);
+    }
+
+    .card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(115deg, rgba(255,255,255,.12), transparent 28%, transparent 72%, rgba(255,255,255,.05));
+    }
+
+    .content { position: relative; z-index: 1; }
+
+    .icon {
+      width: 68px;
+      height: 68px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 1.7rem;
+      border: 1px solid rgba(255,255,255,.26);
+      border-radius: 21px;
+      background: linear-gradient(145deg, rgba(255,255,255,.28), rgba(255,255,255,.07));
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 12px 35px rgba(83,75,190,.22);
+      font-size: 1.85rem;
+    }
+
+    .eyebrow {
+      margin: 0 0 .7rem;
+      color: var(--accent-2);
+      font-size: .74rem;
+      font-weight: 800;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 360px;
+      margin: 0;
+      font-size: clamp(2rem, 7vw, 3.25rem);
+      line-height: .98;
+      letter-spacing: -.055em;
+    }
+
+    .description {
+      margin: 1.35rem 0 2rem;
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.65;
+    }
+
+    .file {
+      display: flex;
+      align-items: center;
+      gap: .85rem;
+      margin-bottom: 1.35rem;
+      padding: .9rem 1rem;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: rgba(0,0,0,.12);
+      color: #e7eaf2;
+      font-size: .9rem;
+      overflow: hidden;
+    }
+
+    .file span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .file strong { display: block; margin-bottom: .16rem; font-size: .92rem; }
+    .file small { color: #9ca9bd; }
+
+    .file-icon { font-size: 1.35rem; }
+
+    button {
+      width: 100%;
+      border: 0;
+      border-radius: 16px;
+      padding: 1rem 1.2rem;
+      color: #101426;
+      background: linear-gradient(110deg, #b8b0ff, #7dceff 52%, #76eee0);
+      box-shadow: 0 12px 30px rgba(103,135,255,.28), inset 0 1px 0 rgba(255,255,255,.6);
+      cursor: pointer;
+      font: inherit;
+      font-weight: 800;
+      transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+    }
+
+    button:hover { transform: translateY(-2px); filter: brightness(1.07); box-shadow: 0 17px 36px rgba(103,135,255,.38), inset 0 1px 0 rgba(255,255,255,.6); }
+    button:active { transform: translateY(0); }
+    button:focus-visible { outline: 3px solid rgba(255,255,255,.8); outline-offset: 4px; }
+    button:disabled { cursor: wait; opacity: .75; }
+
+    .source {
+      display: block;
+      margin-top: 1.15rem;
+      color: #8f9cb0;
+      font-size: .76rem;
+      text-align: center;
+      text-decoration: none;
+    }
+    .source:hover { color: #d9def0; text-decoration: underline; }
+
+    #status { min-height: 1.25rem; margin: .8rem 0 0; color: #bcefeb; font-size: .82rem; text-align: center; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="card" aria-labelledby="title">
+      <div class="content">
+        <div class="icon" aria-hidden="true">↓</div>
+        <p class="eyebrow">Arquivo disponível</p>
+        <h1 id="title">Pergunta Secreta</h1>
+        <p class="description">Baixe o arquivo diretamente do GitHub com um clique.</p>
+
+        <div class="file" aria-label="Arquivo para download">
+          <div class="file-icon" aria-hidden="true">▣</div>
+          <span><strong>Pergunta Secreta.bgr</strong><small>Arquivo binário · GitHub</small></span>
+        </div>
+
+        <button id="downloadButton" type="button">Download do arquivo</button>
+        <p id="status" role="status" aria-live="polite"></p>
+        <a class="source" href="https://github.com/iramalho1980/gerador/blob/4671e15b454bc50823b24a2df6aa526855e68c57/Pergunta%20Secreta.bgr" target="_blank" rel="noopener">Ver arquivo no GitHub ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const fileUrl = 'https://raw.githubusercontent.com/iramalho1980/gerador/4671e15b454bc50823b24a2df6aa526855e68c57/Pergunta%20Secreta.bgr';
+    const button = document.getElementById('downloadButton');
+    const status = document.getElementById('status');
+
+    button.addEventListener('click', async () => {
+      button.disabled = true;
+      status.textContent = 'Preparando download…';
+
+      try {
+        const response = await fetch(fileUrl, { mode: 'cors' });
+        if (!response.ok) throw new Error('Falha ao acessar o arquivo');
+        const blob = await response.blob();
+        const objectUrl = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = objectUrl;
+        link.download = 'Pergunta Secreta.bgr';
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        URL.revokeObjectURL(objectUrl);
+        status.textContent = 'Download iniciado.';
+      } catch (error) {
+        // Fallback para o download nativo do GitHub caso o fetch seja bloqueado.
+        const link = document.createElement('a');
+        link.href = fileUrl;
+        link.download = 'Pergunta Secreta.bgr';
+        link.target = '_blank';
+        link.rel = 'noopener';
+        link.click();
+        status.textContent = 'Abrindo o arquivo para download…';
+      } finally {
+        setTimeout(() => { button.disabled = false; }, 1200);
+      }
+    });
+  </script>
+</body>
+</html>
